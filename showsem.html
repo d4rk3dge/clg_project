@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semester Selection</title>
+    <link rel="stylesheet" href="semstyle.css">
+</head>
+<body>
+    <h1>Select your Department and Semester:</h1>
+    
+    <form>
+        <label for="department">Department:</label>
+        <select id="department" onchange="showSemesters()">
+            <option value="ai">AI</option>
+            <option value="cs">CS</option>
+            <option value="is">IS</option>
+            <option value="mech">Mech</option>
+            <option value="ec">EC</option>
+            <option value="eee">EEE</option>
+        </select>
+        
+        <div id="semesterDiv" style="display: none;">
+            <label for="semester">Semester:</label>
+            <select id="semester">
+                <option value="3rd">3rd Sem</option>
+                <option value="4th">4th Sem</option>
+                <option value="5th">5th Sem</option>
+                <option value="6th">6th Sem</option>
+                <option value='7th'>7th Sem</option>
+                <option value="8th">8th Sem</option>
+            </select>
+        </div>
+
+        <button onclick="viewNotes()">View Notes</button>
+    </form>
+
+    <script>
+        function showSemesters() {
+            var departmentSelect = document.getElementById("department");
+            var semesterDiv = document.getElementById("semesterDiv");
+
+            if (departmentSelect.value === "ai" || departmentSelect.value === "cs" || departmentSelect.value === "is" || departmentSelect.value=="mech" || departmentSelect.value=="ec" || departmentSelect.value=="eee") {
+                semesterDiv.style.display = "block";
+            } else {
+                semesterDiv.style.display = "none";
+            }
+        }
+
+        function viewNotes() {
+            window.location.href = "Notesfinal.html";
+        }
+    </script>
+</body>
+</html>
