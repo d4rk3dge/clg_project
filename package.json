@@ -1,0 +1,14 @@
+{
+  "name": "clg_project",
+  "version": "1.0.0",
+  "description": "I will update the files as per i make the progress",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
